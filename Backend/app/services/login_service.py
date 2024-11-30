@@ -20,5 +20,5 @@ async def login_user(email: str, password: str, db: AsyncSession) -> Token | Non
     if user is None or not authenticate_user(user.password, password):
         return None
 
-    token = await create_access_token({"sub": user.email})
-    return Token(access_token=token, token_type="bearer")
+    token = await create_access_token({"sub": user.email, "role": user.role, "user_id": user.id})
+    return Token(access_token=token, token_type="Bearer")
