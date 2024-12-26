@@ -9,7 +9,7 @@ origins = [
     "http://localhost:5173",
 ]
 
-app.add_middleware(
+api.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
