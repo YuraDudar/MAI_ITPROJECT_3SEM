@@ -12,9 +12,7 @@ router = APIRouter()
 @router.get("/cart")
 async def get_all_products_in_cart(db: AsyncSession = Depends(get_db), credentials: HTTPAuthorizationCredentials = Depends(SimpleBearer())):
     token = credentials
-    print(token)
     payload = await decode_token(token)
-    print(payload)
     return await get_products_in_user_cart(payload["user_id"], db)
 
 @router.get("/cart/{id}")
