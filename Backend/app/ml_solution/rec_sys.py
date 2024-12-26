@@ -1,20 +1,22 @@
 import pickle
 import numpy as np
+import os
 
+path_to_ml_solution = os.path.abspath(os.getcwd()) + "/app/ml_solution"
 try:
-    with open("/home/hedgefo9/projects/MAI_ITPROJECT_3SEM/Backend/app/ml_solution/model.pkl", "rb") as file:
+    with open(path_to_ml_solution + "/model.pkl", "rb") as file:
         model = pickle.load(file)
 
-    with open("/home/hedgefo9/projects/MAI_ITPROJECT_3SEM/Backend/app/ml_solution/sparse.pkl", "rb") as sparse:
+    with open(path_to_ml_solution + "/sparse.pkl", "rb") as sparse:
         sparse_matrix = pickle.load(sparse)
 
-    with open("/home/hedgefo9/projects/MAI_ITPROJECT_3SEM/Backend/app/ml_solution/person.pkl", "rb") as person:
+    with open(path_to_ml_solution + "/person.pkl", "rb") as person:
         person_u = pickle.load(person)
 
-    with open("/home/hedgefo9/projects/MAI_ITPROJECT_3SEM/Backend/app/ml_solution/items.pkl", "rb") as item:
+    with open(path_to_ml_solution + "/items.pkl", "rb") as item:
         thing_u = pickle.load(item)
 
-    with open("/home/hedgefo9/projects/MAI_ITPROJECT_3SEM/Backend/app/ml_solution/item_frequency.pkl", "rb") as freq_file:
+    with open(path_to_ml_solution + "/item_frequency.pkl", "rb") as freq_file:
         item_probabilities = pickle.load(freq_file)
 except Exception as e:
     print([f"Error: {e}"])
