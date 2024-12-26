@@ -12,6 +12,12 @@ class CreateUserRequest(BaseModel):
     email: str
     password: str
 
+class CreateProductAnswer(BaseModel):
+    id: int
+    name: str
+    description: str
+    price: float
+
 class GetProductAnswer(BaseModel):
     id: int
     name: str
