@@ -7,6 +7,7 @@ api = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:5173",
+    "http://localhost:37712"
 ]
 
 api.add_middleware(
@@ -24,3 +25,7 @@ api.include_router(products.router)
 api.include_router(recommendation.router)
 api.include_router(cart.router)
 api.include_router(favorites.router)
+
+@api.options("/")
+def options_root():
+    return {"message": "OK"}
