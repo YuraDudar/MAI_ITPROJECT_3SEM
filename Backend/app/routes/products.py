@@ -5,8 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database.database import get_db
 from app.security import SimpleBearer
 from app.utils.jwt import decode_token
-from routes.schemas import ProductRequest
-from services.product_service import get_product_by_id, get_product_by_filter, create_new_product, update_product_by_id, \
+from app.routes.schemas import ProductRequest
+from app.services.product_service import get_product_by_id, get_product_by_filter, create_new_product, update_product_by_id, \
     delete_product_by_id
 
 router = APIRouter()

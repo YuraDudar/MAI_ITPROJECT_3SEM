@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.services.contracs import GetProductAnswer
 from app.database.models import ProductTable
-from routes.schemas import ProductRequest
+from app.routes.schemas import ProductRequest
 
 
 async def get_product_by_id(id: int, db: AsyncSession) -> GetProductAnswer | None:

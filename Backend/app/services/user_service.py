@@ -6,8 +6,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database.models import UserTable, RoleTable
 from app.services.contracs import GetUserAnswer, CreateUserRequest
-from routes.schemas import UserUpdateRequest
-from utils.jwt import decode_token
+from app.routes.schemas import UserUpdateRequest
+from app.utils.jwt import decode_token
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

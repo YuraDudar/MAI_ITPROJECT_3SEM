@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from fastapi.security import HTTPAuthorizationCredentials
 from sqlalchemy.ext.asyncio import AsyncSession
 
-import ml_solution.rec_sys as rec_sys
+import app.ml_solution.rec_sys as rec_sys
 from app.database.database import get_db
 from app.security import SimpleBearer
 from app.utils.jwt import decode_token
