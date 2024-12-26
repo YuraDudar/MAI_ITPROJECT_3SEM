@@ -1,8 +1,8 @@
 import pickle
 import numpy as np
-import os
+import implicit
 
-path_to_ml_solution = os.path.abspath(os.getcwd()) + "/app/ml_solution"
+path_to_ml_solution = "/code/app/ml_solution"
 try:
     with open(path_to_ml_solution + "/model.pkl", "rb") as file:
         model = pickle.load(file)
