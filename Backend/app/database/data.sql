@@ -5,3 +5,8 @@ VALUES
     ('Wireless Headphones', 'Noise-cancelling over-ear headphones.', 199.99),
     ('Gaming Chair', 'Ergonomic gaming chair with adjustable armrests.', 259.99),
     ('Mechanical Keyboard', 'RGB backlit mechanical keyboard with Cherry MX switches.', 129.99);
+
+INSERT INTO roles (role)
+VALUES
+    ('user'),
+    ('admin');
