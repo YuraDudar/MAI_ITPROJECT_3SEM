@@ -42,8 +42,6 @@ def get_rec(uid_for_rec, n_rec):
         filter_already_liked_items=False,
     )
 
-    # rec_array = [thing_u[recomendation[0][i]] for i in range(n_rec)]
-    # return rec_array
     rec_array = []
     for i in range(n_rec):
         rec_array.append(int((thing_u[recomendation[0][i]])))
@@ -55,7 +53,7 @@ def get_rec(uid_for_rec, n_rec):
 def get_similar_items(item_id, n_similar):
     try:
         # Загрузка модели и данных
-        with open("C:\\Вуз\\Вуз 3 курс\\itproject\\MVP_ITPROJECT\\src\\ml_solution\\model.pkl", "rb") as file:
+        with open(path_to_ml_solution + "/model.pkl", "rb") as file:
             model = pickle.load(file)
 
         # Находим похожие товары
